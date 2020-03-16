@@ -38,7 +38,7 @@ while True:
 
 
         # Sub nodes from the 'latest' node are fetched along with the current date/time and used in the tweet
-        tweet = "Dados do Coronavírus (COVID-19) - 🇧🇷 \n" +  "\n Datas: " + CurrentTimeFormat + "" +  "\n Casos Confirmados: " + str(
+        tweet = "Dados do Coronavírugit as (COVID-19) - 🇧🇷 \n" +  "\n Data: " + CurrentTimeFormat + "" +  "\n Casos Confirmados: " + str(
             LatestData['cases'])+  "\n Casos Confirmados (Hoje): " + str(
             LatestData['todayCases']) + "" + "\n Casos Críticos: " + str(
             LatestData['critical']) + "" + "\n Mortes: " + str(LatestData['deaths']) + "" + "\n Mortes (hoje): " + str(LatestData['todayDeaths']) + "" + "\n Recuperados: " + str(
