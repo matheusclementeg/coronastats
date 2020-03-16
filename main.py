@@ -5,18 +5,18 @@ import tweepy
 import time
 import time
 from datetime import date
-
+from os import environ
 
 # Keys for the authentication process
-ConsumerKey = 'pxQNZ8GHWKBs5ZU1aTtNs4sHj'
-ConsumerSecret = 'ViFUkvoErZwrMw8NUGKGCl2YGdYmbOQQx0FWUHQ2YTL3rozLnc'
-AccessToken = '1239600700369309697-aWDF7ms9nGxyKQ2MYx842KKO3z7qyN'
-AccessTokenSecret = 'xNXszgpBqBcYa3kayMhmBtgWgqNPfmaL7p2KZLk6ZGvSN'
+CONSUMER_KEY = environ['CONSUMER_KEY']
+CONSUMER_SECRET = environ['CONSUMER_SECRET']
+ACCESS_KEY = environ['ACCESS_KEY']
+ACCESS_SECRET = environ['ACCESS_SECRET']
 
 
 # Authentication process using the keys
-auth = tweepy.OAuthHandler(ConsumerKey, ConsumerSecret)
-auth.set_access_token(AccessToken, AccessTokenSecret)
+auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 
 # Creation of the actual interface using authentication
 api = tweepy.API(auth)
