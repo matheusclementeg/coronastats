@@ -6,16 +6,12 @@ import time
 import time
 from datetime import date
 
+
 # Keys for the authentication process
-from os import environ
-#ConsumerKey = 'pxQNZ8GHWKBs5ZU1aTtNs4sHj'
-#ConsumerSecret = 'ViFUkvoErZwrMw8NUGKGCl2YGdYmbOQQx0FWUHQ2YTL3rozLnc'
-#AccessToken = '1239600700369309697-aWDF7ms9nGxyKQ2MYx842KKO3z7qyN'
-#AccessTokenSecret = 'xNXszgpBqBcYa3kayMhmBtgWgqNPfmaL7p2KZLk6ZGvSN'
-CONSUMER_KEY = environ['CONSUMER_KEY']
-CONSUMER_SECRET = environ['CONSUMER_SECRET']
-ACCESS_KEY = environ['ACCESS_KEY']
-ACCESS_SECRET = environ['ACCESS_SECRET']
+ConsumerKey = 'pxQNZ8GHWKBs5ZU1aTtNs4sHj'
+ConsumerSecret = 'ViFUkvoErZwrMw8NUGKGCl2YGdYmbOQQx0FWUHQ2YTL3rozLnc'
+AccessToken = '1239600700369309697-aWDF7ms9nGxyKQ2MYx842KKO3z7qyN'
+AccessTokenSecret = 'xNXszgpBqBcYa3kayMhmBtgWgqNPfmaL7p2KZLk6ZGvSN'
 
 
 # Authentication process using the keys
