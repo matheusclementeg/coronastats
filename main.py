@@ -28,7 +28,7 @@ try:
     # Fetches JSON
     data = response.json()
     # Fetches the 'latest' node from the API
-    LatestData = data[29]
+    LatestData = data[27]
 
     # Current Time
     difference = timedelta(hours=-3)
