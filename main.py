@@ -3,7 +3,7 @@
 import requests
 import tweepy
 import time
-from datetime import datetime, timezone, timedelta
+from datetime import datetime
 from os import environ
 
 # Keys for the authentication process
