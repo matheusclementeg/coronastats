@@ -4,7 +4,6 @@ import requests
 import tweepy
 import pytz
 import time
-import time
 from datetime import datetime
 from os import environ
 
