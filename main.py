@@ -33,9 +33,9 @@ try:
 
     # Current Time
     CurrentTime = date.today()
-    difference = timedelta(hours=-3)
-    time_zone = timezone(difference)
-    CurrentTimeFormat = '{} / {} / {}'.format(CurrentTime.astimezone(fuso_horario).day, CurrentTime.month, CurrentTime.year)
+    #difference = timedelta(hours=-3)
+    #time_zone = timezone(difference)
+    CurrentTimeFormat = '{} / {} / {}'.format(CurrentTime.day, CurrentTime.month, CurrentTime.year)
 
 
     # Sub nodes from the 'latest' node are fetched along with the current date/time and used in the tweet
