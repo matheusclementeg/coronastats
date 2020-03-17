@@ -2,9 +2,8 @@
 
 import requests
 import tweepy
-import pytz
 import time
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from os import environ
 
 # Keys for the authentication process
@@ -32,8 +31,11 @@ try:
     LatestData = data[29]
 
     # Current Time
-    CurrentTime = date.today().replace(tzinfo=pytz.utc)
-    CurrentTimeFormat = '{} / {} / {}'.format(CurrentTime.day, CurrentTime.month, CurrentTime.year)
+    difference = timedelta(hours=-3)
+    time_zone = timezone(difference)
+    CurrentTime = datetime.today()
+    CurrentTimeBR = CurrentTime.astimezone(time_zone)
+    CurrentTimeFormat = '{} / {} / {}'.format(CurrentTimeBR.day,CurrentTimeBR.month,CurrentTimeBR.year
 
 
     # Sub nodes from the 'latest' node are fetched along with the current date/time and used in the tweet
