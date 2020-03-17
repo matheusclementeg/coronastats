@@ -2,9 +2,10 @@
 
 import requests
 import tweepy
+import
 import time
 import time
-from datetime import date, datetime, timezone, timedelta
+from datetime import datetime
 from os import environ
 
 # Keys for the authentication process
@@ -32,14 +33,12 @@ try:
     LatestData = data[29]
 
     # Current Time
-    CurrentTime = date.today()
-    #difference = timedelta(hours=-3)
-    #time_zone = timezone(difference)
+    CurrentTime = date.today().replace(tzinfo=pytz.utc)
     CurrentTimeFormat = '{} / {} / {}'.format(CurrentTime.day, CurrentTime.month, CurrentTime.year)
 
 
     # Sub nodes from the 'latest' node are fetched along with the current date/time and used in the tweet
-    tweet = "Dados do Coronavírus (COVID-19) - 🇧🇷 \n" +  "\n Data: " + CurrentTimeFormat + "" +  "\n Casos Confirmados: " + str(
+    tweet = "Dados do Coronavírus (COVID-19) 🇧🇷 \n" +  "\n Data: " + CurrentTimeFormat + "" +  "\n Casos Confirmados: " + str(
         LatestData['cases']) + "" + "\n Casos Críticos: " + str(
         LatestData['critical']) + "" + "\n Mortes: " + str(LatestData['deaths']) + "" + "\n Recuperados: " + str(
         LatestData['recovered']) + "\n" + "\n #COVID19 #Coronavirus"
