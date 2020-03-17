@@ -30,7 +30,7 @@ while True:
         # Fetches JSON
         data = response.json()
         # Fetches the 'latest' node from the API
-        LatestData = data[31]
+        LatestData = data[29]
 
         # Current Time
         CurrentTime = date.today()
