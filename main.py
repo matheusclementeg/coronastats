@@ -39,10 +39,7 @@ try:
 
 
     # Sub nodes from the 'latest' node are fetched along with the current date/time and used in the tweet
-    tweet = "Dados do Coronavírus (COVID-19) 🇧🇷 \n" +  "\n Data: " + CurrentTimeFormat + "" +  "\n Casos Confirmados: " + str(
-        LatestData['cases']) + "" + "\n Casos Críticos: " + str(
-        LatestData['critical']) + "" + "\n Mortes: " + str(LatestData['deaths']) + "" + "\n Recuperados: " + str(
-        LatestData['recovered']) + "\n" + "\n #COVID19 #Coronavirus"
+    tweet = "Dados do Coronavírus (COVID-19) - 🇧🇷 \n" +  "\n Data: " + CurrentTimeFormat + "" +  "\n Casos Confirmados: " + str(LatestData['cases']) + "" + "\n Casos Críticos: " + str(LatestData['critical']) + "" + "\n Mortes: " + str(LatestData['deaths']) + "" + "\n Recuperados: " + str(LatestData['recovered']) + "\n" + "\n #COVID19 #Coronavirus"
     print(tweet)
     api.update_status(tweet)
 except tweepy.TweepError as error:
