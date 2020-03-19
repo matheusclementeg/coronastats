@@ -37,7 +37,7 @@ try:
     time_zone = timezone(difference)
     CurrentTime = datetime.today()
     CurrentTimeBR = CurrentTime.astimezone(time_zone)
-    CurrentTimeFormat = '{} / {} / {} - {}:{} (Horário de Brasília)'.format(CurrentTimeBR.day,CurrentTimeBR.month,CurrentTimeBR.year,CurrentTimeBR.hour,CurrentTimeBR.minute)
+    CurrentTimeFormat = '{} / {} / {}'.format(CurrentTimeBR.day,CurrentTimeBR.month,CurrentTimeBR.year)
 
     # Sub nodes from the 'latest' node are fetched along with the current date/time and used in the tweet
     tweet = "Dados do Coronavírus (COVID-19) no Brasil 🇧🇷 \n" +  "\n 🗓️ Data: " + CurrentTimeFormat + "" +  "\n 🤒 Casos Confirmados: " + str(
